@@ -1,8 +1,14 @@
 exports.isRankScore = (userInfos, rankFile, guildId) => {
     console.log('Em "isRankScore": ');
     const fs = require('fs');
-    
-    let path = `data\\rankings\\${guildId}\\`;
+
+    let path = "data\\rankings\\";
+
+    if (!fs.existsSync(path)){
+        fs.mkdirSync(path);
+    }
+
+    path += `${guildId}\\`;
 
     if (!fs.existsSync(path) ){
         fs.mkdirSync(path);
