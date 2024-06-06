@@ -15,7 +15,7 @@ exports.getCountry = () => {
         {"name": "Sigla(Alpha-2): ", "value": country.iso2, "inline": true},
     ];
 
-    embed.description = `*Bandeiras by: [flagpedia.net](https://flagpedia.net/download/api 'https://flagpedia.net/download/api').*`
+    embed.description = "*Bandeiras by: [flagpedia.net](https://flagpedia.net/download/api).*"
     embed.image = {"url": "https://flagcdn.com/w640/"+country.iso2.toLowerCase()+".png"}; 
     //"attachment://"+country.iso2.toLowerCase()+".png" <-- another way
     console.log(country.name[0]);
